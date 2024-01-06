@@ -1,11 +1,99 @@
 .container {
+  width: 600px;
+  height: 500px;
+  background-color: white;
+  border-radius: 30px;
+  border-bottom-right-radius: 130px;
+  padding: 30px;
+}
+
+.container .inputs {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .container .input {
+  display: flex;
+  column-gap: 10px;
+  flex-direction: column;
 }
 
 .container .input label {
+  margin-bottom: 6px;
+  font-family: "p-bold";
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: var(--smokey-grey);
 }
 
 .container .input input {
+  width: 115px;
+  height: 60px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid var(--light-grey);
+  font-size: 20px;
+  padding-left: 10px;
+  font-family: "p-bold";
+  color: var(--smokey-grey);
+}
+
+.container .submit {
+  position: relative;
+  margin-top: 20px;
+}
+
+.container .submit::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--light-grey);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.container .submit button {
+  margin-left: auto;
+  display: block;
+  position: relative;
+  z-index: 100;
+  background-color: var(--purple);
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 300ms linear;
+}
+
+.container .submit button:hover {
+  opacity: 0.9;
+}
+
+.container .submit button img {
+  user-select: none;
+}
+
+.container .output {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .output .date {
+  display: flex;
+  font-size: 60px;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .output .date span:first-child {
+  color: var(--purple)
+}
+
+.container .output .date span:last-child {
+  font-family: "p-extrabold";
 }

@@ -5,3 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: var(--off-white);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
